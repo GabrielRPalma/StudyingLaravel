@@ -21,7 +21,7 @@ Route::get('/contacts', 'ContactsController@contacts');
 
 /*
 Receiving parameters from a form in the contacts web page
-*/
+
 Route::get('/contacts/{name}/{details}/{category_id}', function(
     string $name, 
     string $details,
@@ -29,3 +29,17 @@ Route::get('/contacts/{name}/{details}/{category_id}', function(
 
     echo "My name is: $name | My details are: $details | My category number is $category_id";
 });
+
+*/
+/*
+Receiving information using optional parameters in laravel
+Route::get('/contacts/{name}/{details?}', function(
+    string $name, 
+    string $details = 'Details not informed'){
+    echo "The contact name is: $name | The details of the contact are: $details";
+});
+*/
+
+Route::get('/contacts/{name}/{category_id}', function($name, $category_id){
+    echo "The name of the contact is: $name | The category id is: $category_id";
+})->where('name', '[A-Za-z]+')->where('category_id', '[0-9]+');
