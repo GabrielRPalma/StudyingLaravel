@@ -10,4 +10,4 @@
 
 | Packages |
 | --- | 
-|[![Bintray](http s://img.shields.io/badge/Laravel-v7.4.26-brightgreen)](https://bintray.com/blocke/releases/scalajack)|
+|[![Bintray](https://img.shields.io/badge/Laravel-v7.4.26-brightgreen)](https://bintray.com/blocke/releases/scalajack)|
