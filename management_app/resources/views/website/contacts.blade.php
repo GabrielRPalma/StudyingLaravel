@@ -1,0 +1,1 @@
+<h1> This is the <strong>contacts</strong> page</h1>
