@@ -18,3 +18,14 @@ Route::get('/', 'MainController@main');
 Route::get('/about', 'AboutController@about');
 
 Route::get('/contacts', 'ContactsController@contacts');
+
+/*
+Receiving parameters from a form in the contacts web page
+*/
+Route::get('/contacts/{name}/{details}/{category_id}', function(
+    string $name, 
+    string $details,
+    int $category_id){
+
+    echo "My name is: $name | My details are: $details | My category number is $category_id";
+});
