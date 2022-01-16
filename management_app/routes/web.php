@@ -19,6 +19,26 @@ Route::get('/about', 'AboutController@about');
 
 Route::get('/contacts', 'ContactsController@contacts');
 
+Route::get('/login', function(){
+    return 'Login';
+});
+
+Route::prefix('/app')->group(function(){
+    
+    Route::get('/clients', function(){
+        return 'clients';
+    });
+    
+    Route::get('/providers', function(){
+        return 'Providers';
+    });
+    
+    Route::get('/products', function(){
+        return 'Products';
+    });
+    
+});
+
 /*
 Receiving parameters from a form in the contacts web page
 
@@ -40,6 +60,11 @@ Route::get('/contacts/{name}/{details?}', function(
 });
 */
 
+/*
+Receiving parameters and checking it with regular expressions
+
 Route::get('/contacts/{name}/{category_id}', function($name, $category_id){
     echo "The name of the contact is: $name | The category id is: $category_id";
 })->where('name', '[A-Za-z]+')->where('category_id', '[0-9]+');
+
+*/
